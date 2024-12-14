@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #ffc0cb;
+            font-size: x-large;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .image-row img, .image-row video{
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+            gap: 10px;
+            justify-items: center;
+        }
+
+        .grid video {
+        height: 250px;
+        }
+
+        .grid img, .grid video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+        /* Unique class for the custom grid */
+        .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* First row: Two equal columns */
+            grid-template-rows: auto; /* Adjust row height automatically */
+            gap: 10px; /* Consistent gap between all elements */
+            width: 90%; /* Make the grid touch the edges */
+            max-width: 100%; /* Ensure no unwanted overflow */
+            margin: 0 auto; /* Center the grid section */
+        }
+
+        /* First row spans two columns */
+        .custom-grid-item:nth-child(1),
+        .custom-grid-item:nth-child(2) {
+            grid-column: span 1;
+        }
+
+        /* Second row spans three columns */
+        .custom-grid-item:nth-child(3),
+        .custom-grid-item:nth-child(4),
+        .custom-grid-item:nth-child(5)
+        .custom-grid-item:nth-child(6) {
+            grid-column: span 1; /* Ensure three images fit in the row */
+        }
+
+        /* Styling for images and video */
+        .custom-image,
+        .custom-video {
+            width: 100%; /* Make items fill the cell width */
+            height: 250px; /* Uniform height for all items */
+            object-fit: cover; /* Maintain aspect ratio without distortion */
+        }
+
+        /* Make sure the grid edges are flush */
+        .custom-grid-item {
+            padding: 0; /* Remove any padding inside items */
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="/images/header.png" alt="Header Image">
+        </header>
+
+        <section>
+            <h3>Assembling the Prusa MINI+ 3D Printer</h3>
+            <p class="description">Assembled the Prusa MINI+ 3D printer step by step, including mounting the LCD, connecting the wiring, and aligning the components as per the instructions.</p>
+            <div class="image-row">
+                <img src="/images/building1.jpg" alt="Image 1">
+                <img src="/images/building2.jpg" alt="Image 2">
+                <img src="/images/building4.jpg" alt="Image 3">
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <h3>Printing and Assembling a Prosthetic Hand</h3>
+            <p class="description">Built a 3D-printed prosthetic hand by printing components and assembling them with precision for functionality and durability.</p>
+            <div class="image-row">
+                <img src="/images/prosthetic1.png" alt="Image 4">
+                <!-- <img src="/images/prosthetic2.png" alt="Image 5"> -->
+                <img src="/images/prosthetic3.png" alt="Image 6">
+                <video controls>
+                    <source src="/videos/prosthetic.MOV">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <h3>Tactile Street Map Game for Blind and Low Vision Children</h3>
+            <p class="description">Designed and 3D-printed a tactile street map game to enhance spatial awareness and navigation skills for blind and low vision children. This collaborative project combines tactile features, vibrant colors, and interactive elements to create an engaging and educational experience.</p>
+            <div class="custom-grid">
+                <!-- First row: One image and one video -->
+                <div class="custom-grid-item">
+                    <img class="custom-image" src="/images/map6.png" alt="Image 7">
+                </div>
+                <div class="custom-grid-item">
+                    <video class="custom-video" controls>
+                        <source src="/videos/map1.MOV">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+        
+                <!-- Second row: Three images -->
+                <div class="custom-grid-item">
+                    <img class="custom-image" src="/images/map1.png" alt="Image 8">
+                </div>
+                <div class="custom-grid-item">
+                    <img class="custom-image" src="/images/map2.png" alt="Image 9">
+                </div>
+                <div class="custom-grid-item">
+                    <img class="custom-image" src="/images/map3.png" alt="Image 10">
+                </div>
+                <div class="custom-grid-item">
+                    <img class="custom-image" src="/images/map4.png" alt="Image 10">
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section>
+            <h3>Personalized 3D-Printed Stationery Box</h3>
+            <p class="description">3D-printed a compact and functional stationery box featuring intricate lattice sides and playful decorative elements, perfect for organizing pens, pencils, or small desk items.</p>
+            <div class="image-row">
+                <img src="/images/stationery1.png" alt="Image 12">
+                <img src="/images/stationery2.png" alt="Image 13">
+                <img src="/images/stationery3.png" alt="Image 14">
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
